@@ -1,0 +1,127 @@
+/* Paleta del sitio. Bootstrap resuelve la grilla, los espacios y el menú. */
+:root {
+    --verde: #355c45;
+    --verde-oscuro: #274534;
+    --crema: #f8f7f2;
+    --borde: #e2e6dc;
+}
+
+body {
+    background-color: var(--crema);
+    color: #29372e;
+}
+
+.cabecera {
+    background-color: #fff;
+    border-bottom: 1px solid var(--borde);
+}
+
+.marca-icono {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #edf2e7;
+    font-size: 1.7rem;
+}
+
+.marca-nombre {
+    color: var(--verde-oscuro);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.navbar .nav-link {
+    padding: .65rem 1rem;
+    border-radius: .5rem;
+    color: #526057;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background-color: #edf2e7;
+    color: var(--verde-oscuro);
+}
+
+.navbar .nav-link.active { font-weight: 600; }
+
+.bienvenida { background-color: #edf1e5; }
+
+h1, h2, .precio { color: var(--verde-oscuro); }
+
+.etiqueta {
+    color: var(--verde);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.sello-cabra {
+    display: grid;
+    place-items: center;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: #e1e8d7;
+    font-size: 8rem;
+}
+
+.btn-campo {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--verde);
+    --bs-btn-border-color: var(--verde);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--verde-oscuro);
+    --bs-btn-hover-border-color: var(--verde-oscuro);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--verde-oscuro);
+    --bs-btn-active-border-color: var(--verde-oscuro);
+    --bs-btn-focus-shadow-rgb: 53, 92, 69;
+}
+
+.contador, .estado-disponible {
+    color: #284d37;
+    background-color: #e3eddf;
+}
+
+.card-cabra {
+    overflow: hidden;
+    border: 1px solid var(--borde);
+    border-radius: .9rem;
+    box-shadow: 0 3px 14px rgb(41 55 46 / 4%);
+}
+
+.foto-cabra {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+}
+
+.foto-pendiente {
+    background-color: #eeeadd;
+    color: #62644e;
+}
+
+.cabra-emoji { font-size: 5rem; line-height: 1.6; }
+
+.estado-cabra { position: absolute; top: 1rem; left: 1rem; }
+
+.estado-reservada { background-color: #f7e5be; color: #654712; }
+
+.estado-vacio, .panel-contenido {
+    background-color: #fff;
+    border: 1px solid var(--borde);
+    border-radius: .9rem;
+}
+
+.pie { background-color: var(--verde-oscuro); color: #e9eee6; }
+
+.skip-link { display: block; padding: .75rem 1rem; background: #fff; color: var(--verde); }
+
+/* Mantiene visibles los focos al navegar con teclado. */
+a:focus-visible, button:focus-visible { outline: 3px solid #846221; outline-offset: 3px; }
+
+#catalogo { scroll-margin-top: 1rem; }

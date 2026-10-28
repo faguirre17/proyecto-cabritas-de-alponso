@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "nombre": "Margarita",
+        "raza": "Saanen",
+        "edad_meses": 4,
+        "precio": 85000,
+        "uso_principal": "Leche",
+        "descripcion": "Curiosa y tranquila. Una pequeña compañera para conocer de cerca la vida en el campo.",
+        "imagen": "assets/img/margarita.jpg",
+        "disponible": true
+    },
+    {
+        "id": 2,
+        "nombre": "Canela",
+        "raza": "Anglo Nubian",
+        "edad_meses": 5,
+        "precio": 98000,
+        "uso_principal": "Leche y carne",
+        "descripcion": "De orejas largas y personalidad sociable. Le encanta explorar cada rincón del corral.",
+        "imagen": "assets/img/canela.jpg",
+        "disponible": true
+    },
+    {
+        "id": 3,
+        "nombre": "Nube",
+        "raza": "Boer",
+        "edad_meses": 4,
+        "precio": 110000,
+        "uso_principal": "Carne",
+        "descripcion": "Inquieta y de mirada atenta. Siempre es la primera en acercarse a conocer algo nuevo.",
+        "imagen": "assets/img/nube.jpg",
+        "disponible": false
+    },
+    {
+        "id": 4,
+        "nombre": "Olivia",
+        "raza": "Criolla",
+        "edad_meses": 5,
+        "precio": 72000,
+        "uso_principal": "Pastoreo",
+        "descripcion": "Una exploradora de espíritu aventurero que disfruta recorrer el campo con su grupo.",
+        "imagen": "assets/img/olivia.jpg",
+        "disponible": true
+    },
+    {
+        "id": 5,
+        "nombre": "Luna",
+        "raza": "Alpina",
+        "edad_meses": 4,
+        "precio": 92000,
+        "uso_principal": "Leche",
+        "descripcion": "Activa y curiosa. Sus pequeños saltos y su carácter despierto no pasan desapercibidos.",
+        "imagen": "assets/img/luna.jpg",
+        "disponible": true
+    },
+    {
+        "id": 6,
+        "nombre": "Pipa",
+        "raza": "Enana nigeriana",
+        "edad_meses": 5,
+        "precio": 105000,
+        "uso_principal": "Crianza",
+        "descripcion": "Pequeñita y sociable. Disfruta de la compañía y de las tardes tranquilas junto al rebaño.",
+        "imagen": "assets/img/pipa.jpg",
+        "disponible": true
+    }
+]
