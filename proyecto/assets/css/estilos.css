@@ -125,3 +125,158 @@ h1, h2, .precio { color: var(--verde-oscuro); }
 a:focus-visible, button:focus-visible { outline: 3px solid #846221; outline-offset: 3px; }
 
 #catalogo { scroll-margin-top: 1rem; }
+
+
+/* Estilos Extras 15/11 */
+
+/* Personalizo el nombre del emprendimiento junto al logo. */
+.nombre-marca {
+    font-family: "Bree Serif", Georgia, serif;
+    font-size: clamp(1.15rem, 3vw, 1.65rem);
+    color: #355e49;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-shadow: 1px 1px 0 #edf2e6;
+    transition: color 0.2s ease;
+}
+
+/* Destaco el nombre cuando paso el mouse por el enlace del logo. */
+.navbar-brand:hover .nombre-marca {
+    color: #6b7f45;
+}
+
+/* Suavizo el movimiento y la sombra de las tarjetas. */
+.card-cabra {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Elevo ligeramente la tarjeta al pasar el mouse. */
+.card-cabra:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(36, 70, 52, 0.14);
+}
+
+/* Suavizo los cambios de color y movimiento de los botones. */
+.btn {
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                transform 0.2s ease;
+}
+
+/* Elevo los botones habilitados al pasar el mouse. */
+.btn:hover:not(:disabled):not(.disabled) {
+    transform: translateY(-2px);
+}
+
+/* Suavizo los cambios de color del menú. */
+.nav-link {
+    border-radius: 0.6rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Destaco el enlace del menú que estoy recorriendo. */
+.nav-link:hover {
+    background-color: #edf2e6;
+    color: #355e49;
+}
+
+/* Suavizo el borde y la sombra de los campos. */
+.form-control,
+.form-select {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Destaco el campo en el que estoy escribiendo. */
+.form-control:focus,
+.form-select:focus {
+    border-color: #60866b;
+    box-shadow: 0 0 0 0.2rem rgba(96, 134, 107, 0.18);
+}
+
+/* Defino los colores del paginado con la paleta del sitio. */
+.pagination {
+    --bs-pagination-color: #355e49;
+    --bs-pagination-bg: #ffffff;
+    --bs-pagination-border-color: #dce5d6;
+
+    --bs-pagination-hover-color: #244632;
+    --bs-pagination-hover-bg: #edf2e6;
+    --bs-pagination-hover-border-color: #a9bfa3;
+
+    --bs-pagination-focus-color: #244632;
+    --bs-pagination-focus-bg: #edf2e6;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.2rem rgba(96, 134, 107, 0.18);
+
+    --bs-pagination-active-color: #ffffff;
+    --bs-pagination-active-bg: #355e49;
+    --bs-pagination-active-border-color: #355e49;
+
+    --bs-pagination-disabled-color: #8b9588;
+    --bs-pagination-disabled-bg: #f3f5ef;
+    --bs-pagination-disabled-border-color: #e1e7dc;
+
+    gap: 0.4rem;
+}
+
+/* Separo los botones y les doy bordes redondeados. */
+.pagination .page-item .page-link {
+    margin-left: 0;
+    border-radius: 0.65rem;
+    padding: 0.6rem 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+/* Elevo los enlaces de las páginas disponibles. */
+.pagination .page-item:not(.active):not(.disabled) a.page-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Defino una entrada suave para el contenido de cada página. */
+@keyframes aparecerContenido {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplico la animación al contenido principal. */
+main {
+    animation: aparecerContenido 0.4s ease-out;
+}
+
+/* Respeto la preferencia de quienes reducen las animaciones. */
+@media (prefers-reduced-motion: reduce) {
+    main {
+        animation: none;
+    }
+
+    .card-cabra,
+    .btn,
+    .nav-link,
+    .form-control,
+    .form-select,
+    .pagination .page-link {
+        transition: none;
+    }
+
+    .card-cabra:hover,
+    .btn:hover:not(:disabled):not(.disabled),
+    .pagination .page-item:not(.active):not(.disabled) a.page-link:hover {
+        transform: none;
+    }
+}
+
+/* Alineo las fotos de las cards hacia arriba para conservar la cabeza de las cabritas. */
+img.foto-cabra {
+    object-fit: cover;
+    object-position: center top;
+}
